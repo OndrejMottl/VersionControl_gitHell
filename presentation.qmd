@@ -86,7 +86,7 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/a/
 ## Half the battle
 
 ::: {.blockquote}
-Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle when first adopting Git. **Brace yourself for some pain**
+Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle ... **Brace yourself for some pain**
 :::
 
 ```{r}
@@ -97,6 +97,36 @@ include_local_figure("ErrorManagement.jpg")
 ::: footer
 [Happy Git and GitHub for the useR](https://happygitwithr.com/install-intro) |
 [This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
+:::
+
+## Resources
+
+* [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+* [biostats: Version control with GitHub and RStudio](https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html)
+* [Building RAP with R: Version control with Git](https://raps-with-r.dev/git.html)
+* [{usethis} tutorial](https://usethis.r-lib.org/articles/usethis-setup.html#install-git)
+* [RStudio Git](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+* [GitHub Desktop](https://docs.github.com/en/desktop)
+* [Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol)
+* [Git](https://git-scm.com/doc)
+* * ... and many others
+
+## [GitHub]{.r-fit-text} {.subtitle .textcenter}
+
+## Making the account
+
+You will need a [GitHub account]{.text-color-highlight-primary}.
+
+It is super easy to create one, just go to [GitHub.com](https://github.com/) and follow the instructions.
+
+<br>
+
+::: {.fragment .incremental}
+### Some tips
+
+* Use a professional username, preferably your name
+* Use university/science institute email address
+  * You can gain acces to [GitHub Education](https://education.github.com/), e.g.free private repositories!
 :::
 
 ## [Git]{.r-fit-text} {.subtitle .textcenter}
@@ -160,7 +190,9 @@ sudo yum install git
 
 Introduce yourself to Git 👋
 
-❗Not to substitute your name and the email address❗
+❗Note to substitute your name and the email address❗
+
+Use the [same email address]{.text-color-highlight-primary} as the one you used for [GitHub account]{.text-color-highlight-secondary}.
 
 ```{bash}
 #| label: git-config
@@ -171,13 +203,320 @@ git config --global user.email "jane@example.com"
 git config --global --list
 ```
 
-## [GitHub]{.r-fit-text} {.subtitle .textcenter}
+## [Git GUI client]{.r-fit-text} {.subtitle .textcenter}
+
+## Choose your weapon
+
+GUI = **G**raphical **U**ser **I**nterface
+
+You will still need to know the basics of shell.
+
+There are many options, some of the most popular are:
+
+:::: {.columns}
+
+::: {.column width="33%" .textcenter}
+
+<br>
+<br>
+
+```{r}
+#| label: rstudio-logo
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/768px-RStudio_logo_flat.svg.png")
+```
+
+### [RStudio](https://rstudio.com/) 
+:::
+
+::: {.column width="32%" .textcenter}
+```{r}
+#| label: github-desktop-logo
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png")
+```
+
+### [GitHub Desktop](https://desktop.github.com/)
+:::
+
+::: {.column width="33%" .textcenter}
+
+```{r}
+#| label: vscode-logo
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/768px-Visual_Studio_Code_1.35_icon.svg.png")
+```
+
+### [Visual Studio Code](https://code.visualstudio.com/)
+:::
+
+::::
+
+The next sections of the presentation will expain setup of each of these GUI clients. [You only need to choose one!]{.text-color-highlight-primary}
 
 # [RStudio]{.r-fit-text} {.title .textcenter}
 
+## RStudio IDE
+
+```{r}
+#| label: rstudio-ide
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/RStudio_IDE_screenshot.png/1024px-RStudio_IDE_screenshot.png")
+```
+
+::: footer
+[wiki](https://en.wikipedia.org/wiki/RStudio)
+:::
+
+
+## Instal/update R
+
+:::: {.columns}
+
+::: {.column width="70%"}
+Make sure you have the latest version of R installed. You can check the version by running:
+
+```{r}
+#| label: r-version
+#| echo: true
+#| eval: false
+R.version.string
+#> [1] "R version 4.4.1 (2024-06-14, Race for Your Life) "
+```
+
+Install the newest version of R from [CRAN](https://cran.r-project.org/).
+:::
+
+::: {.column width="30%"}
+
+```{r}
+#| label: r-logo
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/768px-R_logo.svg.png")
+```
+:::
+::::
+
+### Bonus
+
+Check out [{updateR}](https://www.danieldsjoberg.com/updater/) package to update R and all installed packages.
+
+## Install/update RStudio
+
+Make sure you have the latest version of RStudio installed. You can check the version by running:
+
+```{r}
+#| label: rstudio-version
+#| echo: true
+#| eval: false
+rstudioapi::versionInfo()$version
+```
+
+You can download the newest version of RStudio from [RStudio website](https://rstudio.com/products/rstudio/download/).
+
+```{r}
+#| label: rstudio-logo-2
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/768px-RStudio_logo_flat.svg.png")
+```
+
+## {usethis} package
+
+:::: {.columns}
+
+::: {.column width="65%"}
+The [{usethis} package](https://usethis.r-lib.org/index.html) is a collection of functions that help automate package and project setup tasks.
+
+Install the package by running:
+```{r}
+#| label: usethis-install
+#| echo: true
+#| eval: false
+install.packages("usethis")
+```
+
+:::
+
+::: {.column width="30%"}
+```{r}
+#| label: usethis-logo
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://usethis.r-lib.org/logo.png")
+```
+:::
+
+:::: 
+
+## Can you hear me now?
+
+We now need to make sure that RStudio can communicate with Git.
+
+### Step 1 - Git
+
+Confirm that git has your name and email by running:
+
+```{r}
+#| label: git-check
+#| echo: true
+#| eval: false
+usethis::git_()
+```
+
+If needed, set the name and email by running:
+
+```{r}
+#| label: git-config-usethis
+#| echo: true
+#| eval: false
+# replace with your name and email
+usedthis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
+```
+
+## Can you hear me now?
+
+We now need to make sure that RStudio can communicate with Git.
+
+###  Step 2 - PAT (Personal Access Token)
+
+You can check more details about it [here](["jane@example.com"](https://usethis.r-lib.org/articles/git-credentials.html)) and [here](https://happygitwithr.com/https-pat#https-pat).
+
+```{r}
+#| label: pat
+#| echo: true
+#| eval: false
+usethis::create_github_token()
+```
+
+Click [Generate token]{.text-color-highlight-primary} and [copy the token]{.text-color-highlight-secondary} to a safe place.
+
+## Can you hear me now?
+
+Add the [PAT]{.text-color-highlight-primary} to RStudio by running:
+
+### Step 3 - RStudio3
+
+```{r}
+#| label: pat-add
+#| echo: true
+#| eval: false
+> gitcreds::gitcreds_set()
+```
+
+## Can you hear me now?
+
+Other useful functions:
+
+```{r}
+#| label: pat-list
+#| echo: true
+#| eval: false
+# Read about PAT
+usethis::gh_token_help()
+
+# List all git settings
+usethis::git_sitrep()
+
+# Check if PAT is set
+gh::gh_whoami()
+```
+
+If everything fails, you can try to set up the PAT manually into your `.Reviron` file.
+
+Simply run:
+```{r}
+#| label: pat-manual
+#| echo: true
+#| eval: false
+usethis::edit_r_environ()
+```
+
+Add a line like this, but substitute your PAT:
+```{bash}
+#| label: pat-manual-2
+#| echo: true
+#| eval: false
+GITHUB_PAT=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+
 # [GitHub Desktop]{.r-fit-text} {.title .textcenter}
 
+## GitHub Desktop
+
+```{r}
+#| label: github-desktop-ide
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://images.ctfassets.net/8aevphvgewt8/5fErhOtgvjrf97d7wOoARB/b262e06c615977f33046c468147aa114/screenshot-windows-dark.png")
+```
+
+::: footer
+[GitHub Desktop](https://github.com/apps/desktop)
+:::
+
+## Installation
+
+Dowload and install [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop).
+
+There is an option to install for all Operating Systems (Windows, Linux, MacOS).
+
+## Configuration
+
+Link your GitHub account to GitHub Desktop.
+
+```{r}
+#| label: github-desktop-config
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://docs.github.com/assets/cb-22759/mw-1440/images/help/desktop/windows-sign-in-github.webp")
+```
+
+::: footer
+[Getting started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)
+:::
+
 # [Visual Studio Code]{.r-fit-text} {.title .textcenter}
+
+## Visual Studio Code
+
+```{r}
+#| label: vscode-ide
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://code.visualstudio.com/assets/home/home-screenshot-mac-2x-v2.png")
+```
+
+::: footer
+[Visual Studio Code](https://code.visualstudio.com/)
+:::
+
+## Installation
+
+Download and install [Visual Studio Code](https://code.visualstudio.com/Download).
+
+There is an option to install for all Operating Systems (Windows, Linux, MacOS).
+
+## GitHub integration
+
+Install the [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extension.
+
+Link your GitHub account to Visual Studio Code.
+
+```{r}
+#| label: vscode-config
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/vscode-accounts-menu.png")
+```
+
+::: footer
+[GitHub integration in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol)
+:::
 
 # [Outro]{.bold .r-fit-text} {.title}
 
