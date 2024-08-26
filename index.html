@@ -9,7 +9,7 @@
 <link href="presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 <title>presentation</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +30,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -405,7 +406,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/768px-Git_icon.svg.png" style="width:100.0%"></p>
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/768px-Git_icon.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -422,7 +423,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png" style="width:100.0%"></p>
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -431,11 +432,41 @@
 </div>
 </section><section id="half-the-battle" class="slide level2"><h2>Half the battle</h2>
 <div class="blockquote">
-<p>Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle when first adopting Git. <strong>Brace yourself for some pain</strong></p>
+<p>Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle … <strong>Brace yourself for some pain</strong></p>
 </div>
 
-<img data-src="materials/ErrorManagement.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
+<img data-src="materials/ErrorManagement.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
 <p><a href="https://happygitwithr.com/install-intro">Happy Git and GitHub for the useR</a> | <a href="https://zenodo.org/doi/10.5281/zenodo.3332807">This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence</a></p>
+</div>
+</section><section id="resources" class="slide level2"><h2>Resources</h2>
+<ul>
+<li><a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a></li>
+<li><a href="https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html">biostats: Version control with GitHub and RStudio</a></li>
+<li><a href="https://raps-with-r.dev/git.html">Building RAP with R: Version control with Git</a></li>
+<li><a href="https://usethis.r-lib.org/articles/usethis-setup.html#install-git">{usethis} tutorial</a></li>
+<li><a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html">RStudio Git</a></li>
+<li><a href="https://docs.github.com/en/desktop">GitHub Desktop</a></li>
+<li><a href="https://code.visualstudio.com/docs/editor/versioncontrol">Visual Studio Code</a></li>
+<li><a href="https://git-scm.com/doc">Git</a></li>
+<li><ul>
+<li>… and many others</li>
+</ul></li>
+</ul></section><section id="github-1" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">GitHub</span></h2>
+</section><section id="making-the-account" class="slide level2"><h2>Making the account</h2>
+<p>You will need a <span class="text-color-highlight-primary">GitHub account</span>.</p>
+<p>It is super easy to create one, just go to <a href="https://github.com/">GitHub.com</a> and follow the instructions.</p>
+<p><br></p>
+<div class="fragment">
+<!-- -->
+<h3 id="some-tips">Some tips</h3>
+<ul>
+<li class="fragment">Use a professional username, preferably your name</li>
+<li class="fragment">Use university/science institute email address
+<ul>
+<li class="fragment">You can gain acces to <a href="https://education.github.com/">GitHub Education</a>, e.g.free private repositories!</li>
+</ul>
+</li>
+</ul>
 </div>
 </section><section id="git-1" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">Git</span></h2>
 </section><section id="shell-intermezzo" class="slide level2"><h2>🐚 shell intermezzo</h2>
@@ -446,8 +477,8 @@
 <p>Is <span class="text-color-highlight-primary">Git</span> already installed?</p>
 <p>Check your <span class="text-color-highlight-secondary">version</span>:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co">## git version 2.42.0.windows.2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb1-2"><a href=""></a><span class="co">## git version 2.42.0.windows.2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="installation-1" class="slide level2"><h2>Installation</h2>
 <div class="panel-tabset">
@@ -466,31 +497,202 @@
 <div id="tabset-1-3">
 <p>Ubuntu or Debian Linux:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sudo</span> apt-get install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="fu">sudo</span> apt-get install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Fedora or RedHat Linux:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> yum install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="fu">sudo</span> yum install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </section><section id="configuration" class="slide level2"><h2>Configuration</h2>
 <p>Introduce yourself to Git 👋</p>
-<p>❗Not to substitute your name and the email address❗</p>
+<p>❗Note to substitute your name and the email address❗</p>
+<p>Use the <span class="text-color-highlight-primary">same email address</span> as the one you used for <span class="text-color-highlight-secondary">GitHub account</span>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Jane Doe"</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"jane@example.com"</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Jane Doe"</span></span>
+<span id="cb4-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"jane@example.com"</span></span>
+<span id="cb4-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="github-1" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">GitHub</span></h2>
-</section></section><section id="rstudio" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">RStudio</span></h1>
+</section><section id="git-gui-client" class="slide level2 subtitle textcenter"><h2><span class="r-fit-text">Git GUI client</span></h2>
+</section><section id="choose-your-weapon" class="slide level2"><h2>Choose your weapon</h2>
+<p>GUI = <strong>G</strong>raphical <strong>U</strong>ser <strong>I</strong>nterface</p>
+<p>You will still need to know the basics of shell.</p>
+<p>There are many options, some of the most popular are:</p>
+<div class="columns">
+<div class="column textcenter" style="width:33%;">
+<p><br><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/768px-RStudio_logo_flat.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<h3 id="rstudio"><a href="https://rstudio.com/">RStudio</a></h3>
+</div>
+<div class="column textcenter" style="width:32%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<h3 id="github-desktop"><a href="https://desktop.github.com/">GitHub Desktop</a></h3>
+</div>
+<div class="column textcenter" style="width:33%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/768px-Visual_Studio_Code_1.35_icon.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<h3 id="visual-studio-code"><a href="https://code.visualstudio.com/">Visual Studio Code</a></h3>
+</div>
+</div>
+<p>The next sections of the presentation will expain setup of each of these GUI clients. <span class="text-color-highlight-primary">You only need to choose one!</span></p>
+</section></section><section><section id="rstudio-1" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">RStudio</span></h1>
 
-</section><section id="github-desktop" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">GitHub Desktop</span></h1>
+</section><section id="rstudio-ide" class="slide level2"><h2>RStudio IDE</h2>
 
-</section><section id="visual-studio-code" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">Visual Studio Code</span></h1>
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/RStudio_IDE_screenshot.png/1024px-RStudio_IDE_screenshot.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p><a href="https://en.wikipedia.org/wiki/RStudio">wiki</a></p>
+</div>
+</section><section id="instalupdate-r" class="slide level2"><h2>Instal/update R</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>Make sure you have the latest version of R installed. You can check the version by running:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>R.version.string</span>
+<span id="cb5-2"><a href=""></a><span class="co">#&gt; [1] "R version 4.4.1 (2024-06-14, Race for Your Life) "</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Install the newest version of R from <a href="https://cran.r-project.org/">CRAN</a>.</p>
+</div><div class="column" style="width:30%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/768px-R_logo.svg.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="bonus">Bonus</h3>
+<p>Check out <a href="https://www.danieldsjoberg.com/updater/">{updateR}</a> package to update R and all installed packages.</p>
+</section><section id="installupdate-rstudio" class="slide level2"><h2>Install/update RStudio</h2>
+<p>Make sure you have the latest version of RStudio installed. You can check the version by running:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>rstudioapi<span class="sc">::</span><span class="fu">versionInfo</span>()<span class="sc">$</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can download the newest version of RStudio from <a href="https://rstudio.com/products/rstudio/download/">RStudio website</a>.</p>
 
-</section><section><section id="outro" class="title-slide slide level1 title center"><h1><span class="bold r-fit-text">Outro</span></h1>
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/768px-RStudio_logo_flat.svg.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="usethis-package" class="slide level2"><h2>{usethis} package</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>The <a href="https://usethis.r-lib.org/index.html">{usethis} package</a> is a collection of functions that help automate package and project setup tasks.</p>
+<p>Install the package by running:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://usethis.r-lib.org/logo.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="can-you-hear-me-now" class="slide level2"><h2>Can you hear me now?</h2>
+<p>We now need to make sure that RStudio can communicate with Git.</p>
+<h3 id="step-1---git">Step 1 - Git</h3>
+<p>Confirm that git has your name and email by running:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>usethis<span class="sc">::</span><span class="fu">git_</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If needed, set the name and email by running:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="co"># replace with your name and email</span></span>
+<span id="cb9-2"><a href=""></a>usedthis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Jane Doe"</span>, <span class="at">user.email =</span> <span class="st">"jane@example.com"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="can-you-hear-me-now-1" class="slide level2"><h2>Can you hear me now?</h2>
+<p>We now need to make sure that RStudio can communicate with Git.</p>
+<h3 id="step-2---pat-personal-access-token">Step 2 - PAT (Personal Access Token)</h3>
+<p>You can check more details about it <a href="%5B%22jane@example.com%22%5D(https://usethis.r-lib.org/articles/git-credentials.html)">here</a> and <a href="https://happygitwithr.com/https-pat#https-pat">here</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Click <span class="text-color-highlight-primary">Generate token</span> and <span class="text-color-highlight-secondary">copy the token</span> to a safe place.</p>
+</section><section id="can-you-hear-me-now-2" class="slide level2"><h2>Can you hear me now?</h2>
+<p>Add the <span class="text-color-highlight-primary">PAT</span> to RStudio by running:</p>
+<h3 id="step-3---rstudio3">Step 3 - RStudio3</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="sc">&gt;</span> gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="can-you-hear-me-now-3" class="slide level2"><h2>Can you hear me now?</h2>
+<p>Other useful functions:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="co"># Read about PAT</span></span>
+<span id="cb12-2"><a href=""></a>usethis<span class="sc">::</span><span class="fu">gh_token_help</span>()</span>
+<span id="cb12-3"><a href=""></a></span>
+<span id="cb12-4"><a href=""></a><span class="co"># List all git settings</span></span>
+<span id="cb12-5"><a href=""></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span>
+<span id="cb12-6"><a href=""></a></span>
+<span id="cb12-7"><a href=""></a><span class="co"># Check if PAT is set</span></span>
+<span id="cb12-8"><a href=""></a>gh<span class="sc">::</span><span class="fu">gh_whoami</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If everything fails, you can try to set up the PAT manually into your <code>.Reviron</code> file.</p>
+<p>Simply run:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Add a line like this, but substitute your PAT:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href=""></a><span class="va">GITHUB_PAT</span><span class="op">=</span>ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section><section id="github-desktop-1" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">GitHub Desktop</span></h1>
+
+</section><section id="github-desktop-2" class="slide level2"><h2>GitHub Desktop</h2>
+
+<img data-src="https://images.ctfassets.net/8aevphvgewt8/5fErhOtgvjrf97d7wOoARB/b262e06c615977f33046c468147aa114/screenshot-windows-dark.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p><a href="https://github.com/apps/desktop">GitHub Desktop</a></p>
+</div>
+</section><section id="installation-2" class="slide level2"><h2>Installation</h2>
+<p>Dowload and install <a href="https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop">GitHub Desktop</a>.</p>
+<p>There is an option to install for all Operating Systems (Windows, Linux, MacOS).</p>
+</section><section id="configuration-1" class="slide level2"><h2>Configuration</h2>
+<p>Link your GitHub account to GitHub Desktop.</p>
+
+<img data-src="https://docs.github.com/assets/cb-22759/mw-1440/images/help/desktop/windows-sign-in-github.webp" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p><a href="https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop">Getting started with GitHub Desktop</a></p>
+</div>
+</section></section><section><section id="visual-studio-code-1" class="title-slide slide level1 title textcenter center"><h1><span class="r-fit-text">Visual Studio Code</span></h1>
+
+</section><section id="visual-studio-code-2" class="slide level2"><h2>Visual Studio Code</h2>
+
+<img data-src="https://code.visualstudio.com/assets/home/home-screenshot-mac-2x-v2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p><a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+</div>
+</section><section id="installation-3" class="slide level2"><h2>Installation</h2>
+<p>Download and install <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>.</p>
+<p>There is an option to install for all Operating Systems (Windows, Linux, MacOS).</p>
+</section><section id="github-integration" class="slide level2"><h2>GitHub integration</h2>
+<p>Install the <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github">GitHub Pull Requests and Issues</a> extension.</p>
+<p>Link your GitHub account to Visual Studio Code.</p>
+
+<img data-src="https://code.visualstudio.com/assets/docs/sourcecontrol/intro/vscode-accounts-menu.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p><a href="https://code.visualstudio.com/docs/editor/versioncontrol">GitHub integration in Visual Studio Code</a></p>
+</div>
+</section></section><section><section id="outro" class="title-slide slide level1 title center"><h1><span class="bold r-fit-text">Outro</span></h1>
 
 </section><section id="about-me" class="slide level2"><h2>About me</h2>
 <div class="columns">
@@ -498,7 +700,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/Ondrej_Mottl-transparent-shadow.png" style="width:100.0%"></p>
+<figure><p><img data-src="materials/Ondrej_Mottl-transparent-shadow.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -506,7 +708,7 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="materials/qr_linktree.png" style="width:100.0%"></p>
+<figure><p><img data-src="materials/qr_linktree.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -535,8 +737,10 @@
 <p><a href="https://github.com/OndrejMottl/VersionControl_gitHell">😸 Code on GitHub</a></p>
 <p><a href="https://ondrejmottl.github.io/VersionControl_gitHell/">🖥️ Slides</a></p>
 </div>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
 </div>
@@ -549,7 +753,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -845,10 +1048,9 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -858,8 +1060,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
