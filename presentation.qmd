@@ -364,7 +364,7 @@ Confirm that git has your name and email by running:
 #| label: git-check
 #| echo: true
 #| eval: false
-usethis::git_()
+usethis::use_git()
 ```
 
 If needed, set the name and email by running:
@@ -374,7 +374,7 @@ If needed, set the name and email by running:
 #| echo: true
 #| eval: false
 # replace with your name and email
-usedthis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
+usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
 ```
 
 ## Can you hear me now?
@@ -404,7 +404,7 @@ Add the [PAT]{.text-color-highlight-primary} to RStudio by running:
 #| label: pat-add
 #| echo: true
 #| eval: false
-> gitcreds::gitcreds_set()
+gitcreds::gitcreds_set()
 ```
 
 ## Can you hear me now?
