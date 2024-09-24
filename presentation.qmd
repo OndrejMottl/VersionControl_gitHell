@@ -404,7 +404,7 @@ Add the [PAT]{.text-color-highlight-primary} to RStudio by running:
 #| label: pat-add
 #| echo: true
 #| eval: false
-> gitcreds::gitcreds_set()
+gitcreds::gitcreds_set()
 ```
 
 ## Can you hear me now?
