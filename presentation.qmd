@@ -7,7 +7,7 @@ format:
     output-file: "index"
     output-ext: "html"
     code-link: true
-    embed-resources: true
+    embed-resources: false
 ---
 
 ```{r}
@@ -230,15 +230,22 @@ git config --global --list
 
 ## [Git GUI client]{.r-fit-text} {.subtitle .textcenter}
 
-## Choose your weapon
-
-GUI = **G**raphical **U**ser **I**nterface
-
-The next sections of the presentation will expain setup of each of these GUI clients. [You only need to choose one!]{.text-color-highlight-primary}
+## **G**raphical **U**ser **I**nterface
 
 There are many options, some of the most popular are:
 
 :::: {.columns}
+
+::: {.column width="30%" .textcenter}
+```{r}
+#| label: github-desktop-logo
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png")
+```
+
+### [GitHub Desktop](https://desktop.github.com/)
+:::
 
 ::: {.column width="40%" .textcenter}
 
@@ -256,17 +263,6 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/d/
 :::
 
 ::: {.column width="30%" .textcenter}
-```{r}
-#| label: github-desktop-logo
-#| fig-width: 1
-#| fig-height: 1
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/768px-Github-desktop-logo-symbol.svg.png")
-```
-
-### [GitHub Desktop](https://desktop.github.com/)
-:::
-
-::: {.column width="30%" .textcenter}
 
 ```{r}
 #| label: vscode-logo
@@ -280,7 +276,45 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/9/
 
 ::::
 
-Navigate to the slides for your chosen GUI client!
+The next sections of the presentation will expain setup of each of these GUI clients. [You only need to choose one!]{.text-color-highlight-primary} 
+
+If you do not use either of them, I recomend using **GitHub Desktop**
+
+# [GitHub Desktop]{.r-fit-text} {.title .textcenter}
+
+## GitHub Desktop
+
+```{r}
+#| label: github-desktop-ide
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://images.ctfassets.net/8aevphvgewt8/5fErhOtgvjrf97d7wOoARB/b262e06c615977f33046c468147aa114/screenshot-windows-dark.png")
+```
+
+::: footer
+[GitHub Desktop](https://github.com/apps/desktop)
+:::
+
+## Installation
+
+Dowload and install [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop).
+
+There is an option to install for all Operating Systems (Windows, Linux, MacOS).
+
+## Configuration
+
+Link your GitHub account to GitHub Desktop.
+
+```{r}
+#| label: github-desktop-config
+#| fig-width: 1
+#| fig-height: 1
+knitr::include_graphics("https://docs.github.com/assets/cb-22759/mw-1440/images/help/desktop/windows-sign-in-github.webp")
+```
+
+::: footer
+[Getting started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)
+:::
 
 # [RStudio]{.r-fit-text} {.title .textcenter}
 
@@ -465,42 +499,6 @@ usethis::git_sitrep()
 # Check if PAT is set
 gh::gh_whoami()
 ```
-
-# [GitHub Desktop]{.r-fit-text} {.title .textcenter}
-
-## GitHub Desktop
-
-```{r}
-#| label: github-desktop-ide
-#| fig-width: 1
-#| fig-height: 1
-knitr::include_graphics("https://images.ctfassets.net/8aevphvgewt8/5fErhOtgvjrf97d7wOoARB/b262e06c615977f33046c468147aa114/screenshot-windows-dark.png")
-```
-
-::: footer
-[GitHub Desktop](https://github.com/apps/desktop)
-:::
-
-## Installation
-
-Dowload and install [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop).
-
-There is an option to install for all Operating Systems (Windows, Linux, MacOS).
-
-## Configuration
-
-Link your GitHub account to GitHub Desktop.
-
-```{r}
-#| label: github-desktop-config
-#| fig-width: 1
-#| fig-height: 1
-knitr::include_graphics("https://docs.github.com/assets/cb-22759/mw-1440/images/help/desktop/windows-sign-in-github.webp")
-```
-
-::: footer
-[Getting started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)
-:::
 
 # [Visual Studio Code]{.r-fit-text} {.title .textcenter}
 
